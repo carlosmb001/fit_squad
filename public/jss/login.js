@@ -1,0 +1,1 @@
+const logEventHandler = async (event) => {};
