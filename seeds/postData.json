@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "workout": "Weight Lifting",
+        "caption": 30,
+        "date": "Aug, 10 2023",
+        "mood_after": "Happy",
+        "mood_before": "Tired",
+        "achieved": true
+    },
+    {
+        "id": 2,
+        "workout": "Running",
+        "caption": 10,
+        "date": "Aug, 11 2023",
+        "mood_after": "Tired",
+        "mood_before": "Happy",
+        "achieved": false
+    },
+    {
+        "id": 3,
+        "workout": "Swimming",
+        "caption": 40,
+        "date": "Aug, 12 2023",
+        "mood_after": "Thrilled",
+        "mood_before": "Excited",
+        "achieved": true
+    },
+    {
+        "id": 4,
+        "workout": "Cycling",
+        "caption": 50,
+        "date": "Aug, 13 2023",
+        "mood_after": "Exhausted",
+        "mood_before": "Excited",
+        "achieved": false
+    }, {
+        "id": 5,
+        "workout": "Weight Lifting",
+        "caption": 25,
+        "date": "Aug, 14 2023",
+        "mood_after": "Grateful",
+        "mood_before": "Optimistic",
+        "achieved": true
+    }
+]
