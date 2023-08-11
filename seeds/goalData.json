@@ -1,0 +1,20 @@
+[
+  {
+    "workout_desrciption": "Weight Lifting",
+    "duration": 30,
+    "workout_id": 4,
+    "user_id": 1
+  },
+  {
+    "workout_desrciption": "Running",
+    "duration": 45,
+    "workout_id": 5,
+    "user_id": 2
+  },
+  {
+    "workout_desrciption": "Swimming",
+    "duration": 20,
+    "workout_id": 6,
+    "user_id": 3
+  }
+]
