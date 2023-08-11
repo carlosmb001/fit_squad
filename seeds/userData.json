@@ -1,21 +1,25 @@
 [
   {
-    "name": "Eric",
+    "first_name": "Eric",
+    "last_name": "Wang",
     "email": "eric@hotmail.com",
     "password": "password12345"
   },
   {
-    "name": "Kevin",
+    "first_name": "Kevin",
+    "last_name": "Kevin",
     "email": "kevin@gmail.com",
     "password": "password12345"
   },
   {
-    "name": "Junel",
+    "first_name": "Junel",
+    "last_name": "Balbin",
     "email": "junel@aol.com",
     "password": "password12345"
   },
   {
-    "name": "Carlos",
+    "first_name": "Carlos",
+    "last_name": "Baltazar",
     "email": "carlos@msn.com",
     "password": "password12345"
   }
