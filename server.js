@@ -1,5 +1,6 @@
 const express = require('express');
-//const session = require("express-session");
+const path = require('path');
+const session = require("express-session");
 const routes = require('./controllers');
 const expressHandlebars = require('express-handlebars');
 
@@ -11,12 +12,12 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = expressHandlebars.create({ helpers });
 
-app.engine('handlebars', hbs.engine());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
