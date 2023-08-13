@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "workout": "Weight Lifting",
         "caption": 30,
         "date": "Aug, 10 2023",
@@ -9,7 +8,6 @@
         "achieved": true
     },
     {
-        "id": 2,
         "workout": "Running",
         "caption": 10,
         "date": "Aug, 11 2023",
@@ -18,7 +16,6 @@
         "achieved": false
     },
     {
-        "id": 3,
         "workout": "Swimming",
         "caption": 40,
         "date": "Aug, 12 2023",
@@ -27,7 +24,6 @@
         "achieved": true
     },
     {
-        "id": 4,
         "workout": "Cycling",
         "caption": 50,
         "date": "Aug, 13 2023",
@@ -35,7 +31,6 @@
         "mood_before": "Excited",
         "achieved": false
     }, {
-        "id": 5,
         "workout": "Weight Lifting",
         "caption": 25,
         "date": "Aug, 14 2023",
