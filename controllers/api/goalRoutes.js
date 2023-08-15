@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
 
   try {
     const goals = await Goal.findAll({
-      
+      include: [{ all: true, nested: true }],
     });
     res.status(200).json(goals);
   } catch (err) {
