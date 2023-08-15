@@ -80,11 +80,6 @@
     "intensity": "Medium"
   },
   {
-    "workout_name": "Walking",
-    "type": "Cardio",
-    "intensity": "Low"
-  },
-  {
     "workout_name": "Swimming",
     "type": "Cardio",
     "intensity": "High"
@@ -127,6 +122,21 @@
   {
     "workout_name": "Badminton",
     "type": "Sports",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Boxing",
+    "type": "Sports",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Rock Climbing",
+    "type": "Sports",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Hiking",
+    "type": "Cardio",
     "intensity": "Medium"
   }
 ]
