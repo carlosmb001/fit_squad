@@ -21,11 +21,17 @@ Goal.init(
     },
     workout_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      references: {
+        model: 'workout',
+        key: 'id',
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {

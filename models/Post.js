@@ -11,10 +11,6 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    workout: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     duration: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -40,6 +36,27 @@ Post.init(
         type: DataTypes.BOOLEAN,
         allowNull: false,
       },
+    goal_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'goal',
+        key: 'id',
+      },
+    },
+    workout_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'workout',
+        key: 'id',
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
