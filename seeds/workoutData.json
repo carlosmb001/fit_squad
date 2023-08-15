@@ -1,0 +1,132 @@
+[
+  {
+    "workout_name": "Bench Press",
+    "type": "Weight Training",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Weighted Squats",
+    "type": "Weight Training",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Deadlifts",
+    "type": "Weight Training",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Leg Press",
+    "type": "Weight Training",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Bicep Curls",
+    "type": "Weight Training",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Shoulder Press",
+    "type": "Weight Training",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Pullups",
+    "type": "Anaerobic",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Pushups",
+    "type": "Anaerobic",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Dips",
+    "type": "Anaerobic",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Jump Rope",
+    "type": "Anaerobic",
+    "intensity": "Low"
+  },
+  {
+    "workout_name": "Sit ups",
+    "type": "Anaerobic",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Planks",
+    "type": "Anaerobic",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Yoga",
+    "type": "Anaerobic",
+    "intensity": "Low"
+  },
+  {
+    "workout_name": "Stretching & Flexibility",
+    "type": "Anaerobic",
+    "intensity": "Low"
+  },
+  {
+    "workout_name": "Sprinting",
+    "type": "Cardio",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Jogging",
+    "type": "Cardio",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Walking",
+    "type": "Cardio",
+    "intensity": "Low"
+  },
+  {
+    "workout_name": "Swimming",
+    "type": "Cardio",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Biking",
+    "type": "Cardio",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Stair Climbing",
+    "type": "Cardio",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Basketball",
+    "type": "Sport",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Volleyball",
+    "type": "Sports",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Football",
+    "type": "Sports",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Soccer",
+    "type": "Sports",
+    "intensity": "High"
+  },
+  {
+    "workout_name": "Tennis",
+    "type": "Sports",
+    "intensity": "Medium"
+  },
+  {
+    "workout_name": "Badminton",
+    "type": "Sports",
+    "intensity": "Medium"
+  }
+]
