@@ -1,44 +1,23 @@
 [
   {
-    "workout_description": "Weight Lifting",
-    "duration": 30,
-    "workout_id": 4,
-    "user_id": 1
+    "duration": 30
   },
   {
-    "workout_description": "Running",
-    "duration": 30,
-    "workout_id": 5,
-    "user_id": 2
+    "duration": 30
   },
   {
-    "workout_description": "Swimming",
-    "duration": 30,
-    "workout_id": 6,
-    "user_id": 3
+    "duration": 30
   },
   {
-    "workout_description": "Cycling",
-    "duration": 30,
-    "workout_id": 7,
-    "user_id": 4
+    "duration": 60
   },
   {
-    "workout_description": "Boxing",
-    "duration": 30,
-    "workout_id": 8,
-    "user_id": 5
+    "duration": 30
   },
   {
-    "workout_description": "Rock Climbing",
-    "duration": 30,
-    "workout_id": 9,
-    "user_id": 6
+    "duration": 30
   },
   {
-    "workout_description": "Hiking",
-    "duration": 30,
-    "workout_id": 10,
-    "user_id": 7
+    "duration": 30
   }
 ]

@@ -11,10 +11,6 @@ Goal.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    workout_description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     duration: {
       type: DataTypes.INTEGER,
       allowNull: false,
