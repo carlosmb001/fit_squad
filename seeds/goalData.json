@@ -7,14 +7,38 @@
   },
   {
     "workout_description": "Running",
-    "duration": 45,
+    "duration": 30,
     "workout_id": 5,
     "user_id": 2
   },
   {
     "workout_description": "Swimming",
-    "duration": 20,
+    "duration": 30,
     "workout_id": 6,
     "user_id": 3
+  },
+  {
+    "workout_description": "Cycling",
+    "duration": 30,
+    "workout_id": 7,
+    "user_id": 4
+  },
+  {
+    "workout_description": "Boxing",
+    "duration": 30,
+    "workout_id": 8,
+    "user_id": 5
+  },
+  {
+    "workout_description": "Rock Climbing",
+    "duration": 30,
+    "workout_id": 9,
+    "user_id": 6
+  },
+  {
+    "workout_description": "Hiking",
+    "duration": 30,
+    "workout_id": 10,
+    "user_id": 7
   }
 ]
