@@ -1,18 +1,18 @@
 [
   {
-    "workout_desrciption": "Weight Lifting",
+    "workout_description": "Weight Lifting",
     "duration": 30,
     "workout_id": 4,
     "user_id": 1
   },
   {
-    "workout_desrciption": "Running",
+    "workout_description": "Running",
     "duration": 45,
     "workout_id": 5,
     "user_id": 2
   },
   {
-    "workout_desrciption": "Swimming",
+    "workout_description": "Swimming",
     "duration": 20,
     "workout_id": 6,
     "user_id": 3
