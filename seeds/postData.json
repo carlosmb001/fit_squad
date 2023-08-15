@@ -1,23 +1,23 @@
 [
     {
         "workout": "Weight Lifting",
-        "caption": 30,
+        "caption": 50,
         "date": "Aug, 10 2023",
-        "mood_after": "Happy",
+        "mood_after": "Stronger",
         "mood_before": "Tired",
         "achieved": true
     },
     {
         "workout": "Running",
-        "caption": 10,
+        "caption": 50,
         "date": "Aug, 11 2023",
-        "mood_after": "Tired",
-        "mood_before": "Happy",
+        "mood_after": "Thirsty",
+        "mood_before": "Energized",
         "achieved": false
     },
     {
         "workout": "Swimming",
-        "caption": 40,
+        "caption": 50,
         "date": "Aug, 12 2023",
         "mood_after": "Thrilled",
         "mood_before": "Excited",
@@ -30,12 +30,37 @@
         "mood_after": "Exhausted",
         "mood_before": "Excited",
         "achieved": false
-    }, {
+    }, 
+    {
         "workout": "Weight Lifting",
-        "caption": 25,
+        "caption": 50,
         "date": "Aug, 14 2023",
         "mood_after": "Grateful",
         "mood_before": "Optimistic",
+        "achieved": true
+    },
+    {
+        "workout": "Boxing",
+        "caption": 50,
+        "date": "Aug, 15 2023",
+        "mood_after": "Knocked Out",
+        "mood_before": "Pumped",
+        "achieved": true
+    },
+    {
+        "workout": "Rock Climbing",
+        "caption": 50,
+        "date": "Aug, 16 2023",
+        "mood_after": "Vertigo",
+        "mood_before": "Nervous",
+        "achieved": false
+    },
+    {
+        "workout": "Hiking",
+        "caption": 50,
+        "date": "Aug, 17 2023",
+        "mood_after": "Happy",
+        "mood_before": "Stressed",
         "achieved": true
     }
 ]
