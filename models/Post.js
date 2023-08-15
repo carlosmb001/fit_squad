@@ -16,8 +16,9 @@ Post.init(
       allowNull: false,
     },
     duration: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue:30
     },
     caption: {
         type: DataTypes.STRING,
