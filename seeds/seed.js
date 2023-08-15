@@ -24,7 +24,9 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });*/
+
   let goals = []
+  
   for (const goal of goalData) {
     const goalrec = await Goal.create({
       ...goal,
