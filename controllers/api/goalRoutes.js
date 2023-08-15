@@ -1,5 +1,20 @@
 const router = require("express").Router();
-const { Goal } = require("../../models/Goal");
+const { Goal } = require("../../models");
+
+
+// Get all goals
+router.get("/", async (req, res) => {
+
+  try {
+    const goals = await Goal.findAll({
+      
+    });
+    res.status(200).json(goals);
+  } catch (err) {
+    console.log(err)
+    res.status(400).json(err);
+  }
+});
 
 // create a new goal
 router.post("/", async (req, res) => {
@@ -48,3 +63,5 @@ router.delete("/goal/:id", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+module.exports = router;
