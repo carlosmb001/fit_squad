@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/x-handlebars-template" id="#template">
+    {{! this is a comment }}
+        <h1>{{title}}</h1>
+        <ol>
+            {{#each list}}
+                <li> {{this.name}} </li>
+            {{each}}
+        </ol>
+        <p>{{footer}}</p>
+    </script>
+    <div id="output">
+
+    </div>
+    <button onclick="fill_template()">
+        fill template
+    </button>
+</body>
+</html>
