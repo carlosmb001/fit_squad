@@ -10,6 +10,7 @@ const session = require('express-session');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+//Create handlebar instance
 const hbsengine = expressHandlebars.create({
   helpers,
 });
@@ -17,21 +18,23 @@ const hbsengine = expressHandlebars.create({
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+//Session config
 const sessionObj = {
-  secret: 'One super squad secret key',
+  secret: process.env.SECRET_KEY,
   cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
   })
-};
+}; 
 
 app.use(session(sessionObj));
 
 app.engine('handlebars', hbsengine.engine);
 app.set('view engine', 'handlebars');
 
+//Middleware setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, "public")));
