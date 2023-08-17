@@ -10,6 +10,75 @@
     <form class="card" id="post-form">
         <label for="workouts">Workout:</label>
         <select name="workouts" id="workout-btn">
+            {{!--
+
+            <option hidden disabled selected value>Choose a workout</option> {{!-- source for using a placeholder option for a drop-down menu that cannot be selected and becomes hidden after an option is selected: https://stackoverflow.com/questions/8605516/set-the-select-option-as-blank-as-default-in-html-select-element --}}
+
+            <optgroup label="WEIGHT TRAINING">
+                <optgroup label="High Intensity">
+                    <option value="bench_press">Bench Press</option>
+                    <option value="deadlifts">Deadlifts</option>
+                    <option value="weighted_squats">Weighted Squats</option>
+                </optgroup>
+                <optgroup label="Medium Intensity">
+                    <option value="bicep_curls">Bicep Curls</option>
+                    <option value="leg_press">Leg Press</option>
+                    <option value="shoulder_press">Shoulder Press</option>
+                </optgroup>
+            </optgroup>
+            <optgroup></optgroup>
+
+            <optgroup label="ANAEROBIC">
+                <optgroup label="High Intensity">
+                    <option value="dips">Dips</option>
+                    <option value="planks">Planks</option>
+                    <option value="pull_ups">Pull Ups</option>
+                </optgroup>
+                <optgroup label="Medium Intensity">
+                    <option value="pushups">Pushups</option>
+                    <option value="sit_ups">Sit ups</option>
+                </optgroup>
+                <optgroup label="Low Intensity">
+                    <option value="jump_rope">Jump Rope</option>
+                    <option value="stretching_and_flexibility">Stretching and Flexibility</option>
+                    <option value="yoga">Yoga</option>
+                </optgroup>
+            </optgroup>
+            <optgroup></optgroup>
+
+            <optgroup label="CARDIO">
+                <optgroup label="High Intensity">
+                    <option value="sprinting">Sprinting</option>
+                    <option value="stair_climbing">Stair Climbing</option>
+                    <option value="swimming">Swimming</option>
+                </optgroup>
+                <optgroup label="Medium Intensity">
+                    <option value="biking">Biking</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="jogging">Jogging</option>
+                </optgroup>
+            </optgroup>
+            <optgroup></optgroup>
+
+            <optgroup label="SPORTS">
+                <optgroup label="High Intensity">
+                    <option value="basketball">Basketball</option>
+                    <option value="boxing">Boxing</option>
+                    <option value="football">Football</option>
+                    <option value="soccer">Soccer</option>
+                </optgroup>
+                <optgroup label="Medium Intensity">
+                    <option value="badminton">Badminton</option>
+                    <option value="rock_climbing">Rock Climbing</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="volleyball">Volleyball</option>
+                </optgroup>
+            </optgroup>
+            <optgroup></optgroup>
+
+            --}}
+
+            
             {{#each type}}
                 <optgroup>{{type}}
                     {{#each workout_name}}
