@@ -1,0 +1,53 @@
+<div class="card">
+ {{!-- card showing profile pic, mood, link to profile --}}
+    <div class="profile-preview">
+        <a href="./profile.handlebars">
+            <img src="{{profile_pic}}" alt="profile pic" class="profile-pic">
+            {{first_name}} + {{last_name}}
+        </a> 
+    </div>
+ {{!-- field to create post --}}
+    <form class="card" id="post-form">
+        <label for="workouts">Workout:</label>
+        <select name="workouts" id="workout-btn">
+            {{#each type}}
+                <optgroup>{{type}}
+                    {{#each workout_name}}
+                        <option>{{ workout_name }}</option>
+                    {{/each}}
+                </optgroup>
+            {{/each}}
+        </select>
+
+        <label for="workout-goals">Goals:</label>
+        <select name ="workout-goals" id="goals-btn">
+            {{#each goals}}
+                <option>{{ goals }}</option>
+            {{/each}}
+        </select>
+        <br/>
+        <input type="text" id="post-input" placeholder="How'd you get fit today?">
+        <button type="submit" id="post-btn">Post</button>
+    </form> 
+ {{!-- section to display workout goals --}}
+    <div class="card" id="goals-section">
+        <h3>Current Active Goals:</h3>
+        <ul id="goals-list">
+            {{#each goals}}
+                <li>{{ goals }}</li>
+            {{/each}}
+        </ul>
+    </div>
+ {{!-- section to display posts  --}}
+    <div class="card" id="posts-section">
+        <h3>Recent Posts:</h3>
+        <ul id="posts-list">
+            {{#each post}}
+                <li>{{ post }}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
+
+<script src="/js/dashboard.js"></script>

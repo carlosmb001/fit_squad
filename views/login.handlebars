@@ -1,33 +1,35 @@
-<div class="card">
-  <h3 class="card-header" style="padding-bottom: 1.5%;">Login</h3>
+<div class="columns is-vcentered" style="height: 40vh;">
+  <div class="column"></div> <!-- Empty column to push the form to the right -->
 
-  <form id="loginForm" class="card-body" style="font-size:x-large;">
-    <div>
-      <label for="login_email">eMail</label>
-      <input
-        style="width: 100%;font-size:large;"
-        type="text"
-        id="login_email"
-      />
-    </div>
-    <div>
-      <label for="login_password">Password</label>
-      <input
-        style="width: 100%;font-size:large;"
-        type="password"
-        id="login_password"
-      />
-    </div>
-    <div
-      style=""
-    >
-<br/>
-      <button class="btn">
-        Login
-      </button>
-      <br/>
-      <a style="text-decoration: underline;" href="/user/signup">Sign Up</a>
-    </div>
-  </form>
+  <div class="column is-4"> <!-- Form column -->
+    <form id="loginForm">
+      <div class="field">
+        <label class="label" for="login_email">Username</label>
+        <div class="control">
+          <input id="login_email" class="input login_email" type="text" placeholder="Email">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="login_password">Password</label>
+        <div class="control has-icons-left">
+          <input id="login_password" class="input login_password" type="password" placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button id="submitButton" class="button is-link">Login</button>
+        </div>
+        <div class="field is-grouped"> </div>
+        <div class="control">
+          <button class="button is-link"><a href="/user/signup">Sign Up</a></button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 <script src="/js/login.js"></script>
