@@ -98,8 +98,8 @@
   
   .hero {
     padding: 1.5% 5%;
-    background-color: var(--dark);
     color: var(--primary);
+    flex-direction:row;
   }
   
   .hero p {
@@ -114,6 +114,7 @@
   
   .hero nav {
     font-size: 24px;
+    float:right;
   }
   
   .hero nav ul {
@@ -143,6 +144,7 @@
     display: inline-block;
     border-radius: var(--border-radius);
     box-shadow: 6px 5px var(--light-dark);
+    width: fit-content;
   }
   
   .list-group {
