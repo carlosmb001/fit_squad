@@ -20,7 +20,7 @@ document.getElementById("loginForm").addEventListener("submit", (e) => {
         }
 
         result.json().then(() => {
-            window.location = '/';
+            window.location = '/dashboard';
         });
     });
 });
