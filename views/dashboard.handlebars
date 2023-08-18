@@ -7,32 +7,48 @@
             {{first_name}} + {{last_name}}
         </a> 
     </div>
- {{!-- field to create post --}}
+ {{!-- field to create workout goal --}}
     <form class="card" id="post-form">
-        <label for="workouts">Workout:</label>
+        <h3>New Workout Goal:</h3>
+        <label for="workouts">Exercise:</label>
         <select name="workouts" id="workout-btn">
-            <!--{{#each type}}
-                <optgroup>{{type}}
-                    {{#each workout_name}}
-                        <option>{{ workout_name }}</option>
-                    {{/each}}
-                </optgroup>
-            {{/each}} -->
             {{#each workouts as |workout|}}
                  <option>{{workout_name}}</option>
             {{/each}}
         </select>
 
+        <label for="duration">Duration:</label>
+        <select name="workout-goals" id="goals-btn">
+            <option>10 min</option>
+            <option>20 min</option>
+            <option>30 min</option>
+            <option>40 min</option>
+            <option>50 min</option>
+            <option>60 min</option>
+            <option>90 min</option>
+            <option>120 min</option>
+        </select>
+    </form>
+ {{!-- field for user to make posts  --}}
+    <form class="card">
+        <h3>New Post:</h3>
+        <label for="workouts">Exercise:</label>
+        <select name="workouts" id="workout-btn">
+            {{#each workouts as |workout|}}
+                 <option>{{workout_name}}</option>
+            {{/each}}
+        </select>
         <label for="workout-goals">Goals:</label>
         <select name ="workout-goals" id="goals-btn">
             {{#each goals as |goal|}}
-                <option>{{workout.workout_name}}-{{duration}}mins</option>
+                <option>{{workout.workout_name}}-{{duration}} mins</option>
             {{/each}}
         </select>
         <br/>
-        <input type="text" id="post-input" placeholder="How'd you get fit today?">
+        <input class="post" type="text" id="post-input" placeholder="How'd you get fit today?">
         <button type="submit" id="post-btn">Post</button>
-    </form> 
+
+    </form>
  {{!-- section to display workout goals --}}
     <div class="card" id="goals-section">
         <h3>Current Active Goals:</h3>
