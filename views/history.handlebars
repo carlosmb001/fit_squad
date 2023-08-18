@@ -1,0 +1,18 @@
+ {{!-- section to display workout goals --}}
+    <div class="card" id="goals-section">
+        <h3>Current Active Goals:</h3>
+        <ul id="goals-list">
+            {{#each goals as |goal|}}
+                <li>{{workout.workout_name}}  {{duration}}</li>
+            {{/each}}
+        </ul>
+    </div>
+ {{!-- section to display posts  --}}
+    <div class="card" id="posts-section">
+        <h3>Recent Posts:</h3>
+        <ul id="posts-list">
+            {{#each posts as |post|}}
+                <li>{{data}} {{workout.workout_name}} {{duration}} {{mood_before}} {{mood_after}} {{achieved}}</li>
+            {{/each}}
+        </ul>
+    </div>
