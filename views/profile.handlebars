@@ -1,18 +1,17 @@
 <div class="columns is-vcentered" style="height: 60vh;">
     <div class="column">
       <figure class="has-text-centered">
-        <img src="assets/images/9981f3093c6a4c3d918898fcbc7880d3" style="max-width: 30vw;max-height: 50vh;object-fit: contain;" alt="Upload your profile image"/>
+        <img src="assets/images/{{user.id}}.svg" style="max-width: 30vw;max-height: 50vh;object-fit: contain;" alt="Upload your profile image"/>
         <figcaption>
 
         <div class="has-text-centered">
-          <button id="uploadButton" class="button is-link">Upload New Image</button>
+         
         </div>
 
-          <form action="/profile/upload" enctype="multipart/form-data" method="post">
+          <form action="/profile" enctype="multipart/form-data" method="post">
             <div class="form-group">
               <input type="file" class="form-control-file" name="uploaded_file">
-              <input type="text" class="form-control" placeholder="Number of speakers" name="nspeakers">
-              <input type="submit" value="Get me the stats!" class="btn btn-default">
+              <input type="submit" value="Upload New Image" class="button is-link">
             </div>
           </form>
 
