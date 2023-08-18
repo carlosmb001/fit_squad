@@ -56,7 +56,7 @@
             <button class="button is-white is-normal" type="submit" id="newGoalBtn">New Goal</button>
         </form>
         {{!-- field for user to make posts --}}
-        <form class="create-post column-all card">
+        {{!-- <form class="create-post column-all card">
             <h3>New Post</h3>
             <label for="workouts">Exercise</label>
             <div class="select is-normal">
@@ -79,8 +79,40 @@
                 placeholder="How'd you get fit today?"></input>
             <button class="button is-white is-normal" type="submit" id="postBtn">Post</button>
         </form>
-    </div>
 
+        --}}
+
+
+        <form class="box">
+            <div class="field">
+               <div class="new-post-header">
+            <h3>New Posts</h3>
+        </div>
+                <label class="label">Exercise</label>
+                <div class="select is-normal">
+                    <select name="workouts" id="workout-btn">
+                        {{#each workouts as |workout|}}
+                        <option>{{workout_name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <label for="workout-goals">Goals</label>
+            <div class="select is-normal">
+                <select name="workout-goals" id="goals-btn">
+                    {{#each goals as |goal|}}
+                    <option>{{workout.workout_name}}: {{duration}} mins</option>
+                    {{/each}}
+                </select>
+            </div>
+            <br />
+            <input class="input is-normal" class="post" type="text" id="post-input"
+                placeholder="How'd you get fit today?"></input>
+            <button class="button is-white is-normal" type="submit" id="postBtn">Post</button>
+        </form>
+
+
+    </div>
     {{!-- section to display workout goals --}}
     <div class="right-container">
         {{!--
@@ -96,8 +128,8 @@
         </article>
         --}}
 
-        <div class="message-header c-goal">
-            <h3>Current Active Goals</h3>
+        <div class="message-header goals-header">
+            <h3>Current Goals</h3>
         </div>
         {{#each goals as |goal|}}
         <div class="goals card">
@@ -127,7 +159,9 @@
             </div>
         </div>--}}
 
-
+        <div class="message-header posts-header">
+            <h3>Recent Posts</h3>
+        </div>
         {{#each posts as |post|}}
         <article class="posts media">
             <figure class="media-left">
