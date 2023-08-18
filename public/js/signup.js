@@ -32,7 +32,7 @@ document.getElementById("submitButton").addEventListener("click", async (e) => {
             throw new Error('create user request failed');
         }
 
-        window.location = '/'; // Redirect to a different page after successful submission
+        window.location = '/dashboard'; // Redirect to a different page after successful submission
     } catch (error) {
         console.error('Error creating user:', error);
     }
