@@ -16,7 +16,6 @@
                  <option>{{workout_name}}</option>
             {{/each}}
         </select>
-
         <label for="duration">Duration:</label>
         <select name="workout-goals" id="goals-btn">
             <option>10 min</option>
@@ -27,7 +26,13 @@
             <option>60 min</option>
             <option>90 min</option>
             <option>120 min</option>
+            <option>150 min</option>
+            <option>180 min</option>
+            <option>210 min</option>
+            <option>240 min</option>
         </select>
+        <br>
+        <button type="submit" id="newGoalBtn">New Goal</button>
     </form>
  {{!-- field for user to make posts  --}}
     <form class="card">
@@ -46,8 +51,7 @@
         </select>
         <br/>
         <input class="post" type="text" id="post-input" placeholder="How'd you get fit today?">
-        <button type="submit" id="post-btn">Post</button>
-
+        <button type="submit" id="postBtn">Post</button>
     </form>
  {{!-- section to display workout goals --}}
     <div class="card" id="goals-section">
