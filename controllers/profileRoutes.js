@@ -1,22 +1,25 @@
 const router = require("express").Router();
 const { logAuth } = require('../utils/auth')
 const { User } = require('../models');
+const path = require('path')
 const multer  = require('multer')
+
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
+    destination:  (req, file, cb) =>{
       cb(null, 'public/assets/images')
     },
-    filename: function (req, file, cb) {
-      
-      cb(null, file.fieldname + '-' + uniqueSuffix)
+    filename: (req, file, cb) => {
+      console.log(file)
+      cb(null, req.session.user_id + path.extname(file.originalname))
     }
   })
-const upload = multer({ dest: 'public/assets/images' })
+const upload = multer({ storage : storage })
 
-router.post('/upload', logAuth,upload.single('uploaded_file'), function (req, res) {
+router.post('/', logAuth,upload.single('uploaded_file'), function (req, res) {
     // req.file is the name of your file in the form above, here 'uploaded_file'
     // req.body will hold the text fields, if there were any 
-    console.log(req.file, req.body)
+    console.log('File Uploaded')
+    res.status(200).redirect('/profile')
 });
 
 router.get("/", logAuth, async (req, res) => {
