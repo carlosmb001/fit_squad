@@ -10,6 +10,14 @@
     <form class="card" id="post-form">
         <label for="workouts">Workout:</label>
         <select name="workouts" id="workout-btn">
+            {{#each type}}
+                <optgroup>{{type}}
+                    {{#each intensity}}
+                        <option>{{ workout_name }}</option>
+                    {{/each}}
+                </optgroup>
+            {{/each}}
+        </select>
             {{!--
 
             <option hidden disabled selected value>Choose a workout</option> {{!-- source for using a placeholder option for a drop-down menu that cannot be selected and becomes hidden after an option is selected: https://stackoverflow.com/questions/8605516/set-the-select-option-as-blank-as-default-in-html-select-element --}}
@@ -78,15 +86,16 @@
 
             --}}
 
-            
+        {{!--    
             {{#each type}}
                 <optgroup>{{type}}
-                    {{#each workout_name}}
+                    {{#each intensity}}
                         <option>{{ workout_name }}</option>
                     {{/each}}
                 </optgroup>
             {{/each}}
         </select>
+        --}}
 
         <label for="workout-goals">Goals:</label>
         <select name ="workout-goals" id="goals-btn">
