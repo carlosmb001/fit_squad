@@ -138,12 +138,13 @@
   
   .app-title {
     font-size: 4rem;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    background: url(./../images/logo.svg) no-repeat center center fixed;
     color: var(--dark);
     padding: 0 20px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    /*box-shadow: 6px 5px var(--light-dark);*/
     width: fit-content;
   }
   
