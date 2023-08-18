@@ -13,30 +13,29 @@
 
 <body class="flex-column min-100-vh">
   <header class="hero">
+     <h1 class="app-title"> Fit Squad </h1>
     <nav>
         <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
+            {{#if logged_in}}
             <li>
                 <a href="/dashboard">Dashboard</a>
             </li>
-            {{#unless logged_in}}
             <li>
-                <a href="/user/login">Login</a>
+                <a href="/profile">Profile</a>
             </li>
-            {{/unless}}
-            {{#if logged_in}}
+            <li>
+                <a href="/history">History</a>
+            </li>
             <li>
                 <a href="/user/logout">Logout</a>
             </li>
             {{/if}}
         </ul>
     </nav>
-    <h1 class="app-title"> Fit Squad </h1>
+   
   </header>
   <main class="justify-space-between">
-  
+
         {{{body}}}
 
   </main>
