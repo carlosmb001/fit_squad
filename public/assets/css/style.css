@@ -124,6 +124,7 @@
   /* inline block to make navigation item display as rows */
   .hero nav ul li {
     display: inline-block;
+    margin-top: 20px;
     margin-right: 50px;
   }
   
@@ -137,6 +138,13 @@
     text-decoration: none;
   }
   
+  a:hover {
+    color: rgb(236, 233, 233);
+    text-underline-offset: 20px;
+    transition: 0.2s ease-in-out;
+    font-style: italic;
+  }
+
   .app-title {
     font-size: 4rem;
     /* background-color: var(--primary); */
@@ -332,7 +340,7 @@
   .col-sm-12 {
     flex: 0 0 100%;
   }
-}
+
 
 /* col-md */
 @media screen and (min-width: 768px) {
@@ -484,5 +492,14 @@
 
   .col-xl-12 {
     flex: 0 0 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .hero nav ul li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 50px;
   }
 }
