@@ -136,6 +136,13 @@
     text-decoration: none;
   }
   
+  a:hover {
+    color: rgb(236, 233, 233);
+    text-underline-offset: 20px;
+    transition: 0.2s ease-in-out;
+    font-style: italic;
+  }
+
   .app-title {
     font-size: 4rem;
     background-color: var(--primary);
@@ -536,5 +543,13 @@
     }
   }
   
+   @media screen and (max-width: 768px) {
+
+    .hero nav ul li {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 50px;
+    }
+  }
   
   
