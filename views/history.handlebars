@@ -1,18 +1,64 @@
- {{!-- section to display workout goals --}}
-    <div class="card" id="goals-section">
-        <h3>Current Active Goals:</h3>
-        <ul id="goals-list">
-            {{#each goals as |goal|}}
-                <li>{{workout.workout_name}}  {{duration}}</li>
-            {{/each}}
-        </ul>
-    </div>
- {{!-- section to display posts  --}}
-    <div class="card" id="posts-section">
-        <h3>Recent Posts:</h3>
-        <ul id="posts-list">
-            {{#each posts as |post|}}
-                <li>{{data}} {{workout.workout_name}} {{duration}} {{mood_before}} {{mood_after}} {{achieved}}</li>
-            {{/each}}
-        </ul>
+   <link rel="stylesheet" href="/assets/css/history.css" />
+   
+   <div class="message-header goals-header">
+            <h3>Current Goals</h3>
+        </div>
+        {{#each goals as |goal|}}
+        <div class="goals card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    Duration: {{duration}}
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    Workout Preformed</br>
+                    {{workout.workout_name}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+        {{!-- section to display posts --}}
+        <div class="message-header posts-header">
+            <h3>Recent Posts</h3>
+        </div>
+        {{#each posts as |post|}}
+        <article class="posts media">
+            <figure class="media-left">
+                <p class="image is-64x64">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>{{workout.workout_name}}</strong> <small>{{duration}} mins</small> <small>Goal achived
+                            {{achieved}}</small>
+                        <br>
+                        Mood before {{mood_before}}<br>
+                        Mood after{{mood_after}}<br>
+                        Data {{data}}<br>
+                    </p>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left">
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="media-right">
+                <button class="delete"></button>
+            </div>
+        </article>
+        {{/each}}
     </div>
