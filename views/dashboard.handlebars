@@ -1,3 +1,4 @@
+
 <div class="card">
  {{!-- card showing profile pic, mood, link to profile --}}
     <div class="profile-preview">
@@ -10,19 +11,22 @@
     <form class="card" id="post-form">
         <label for="workouts">Workout:</label>
         <select name="workouts" id="workout-btn">
-            {{#each type}}
+            <!--{{#each type}}
                 <optgroup>{{type}}
                     {{#each workout_name}}
                         <option>{{ workout_name }}</option>
                     {{/each}}
                 </optgroup>
+            {{/each}} -->
+            {{#each workouts as |workout|}}
+                 <option>{{workout_name}}</option>
             {{/each}}
         </select>
 
         <label for="workout-goals">Goals:</label>
         <select name ="workout-goals" id="goals-btn">
-            {{#each goals}}
-                <option>{{ goals }}</option>
+            {{#each goals as |goal|}}
+                <option>{{workout.workout_name}}-{{duration}}mins</option>
             {{/each}}
         </select>
         <br/>
@@ -33,8 +37,8 @@
     <div class="card" id="goals-section">
         <h3>Current Active Goals:</h3>
         <ul id="goals-list">
-            {{#each goals}}
-                <li>{{ goals }}</li>
+            {{#each goals as |goal|}}
+                <li>{{workout.workout_name}}  {{duration}}</li>
             {{/each}}
         </ul>
     </div>
@@ -42,8 +46,8 @@
     <div class="card" id="posts-section">
         <h3>Recent Posts:</h3>
         <ul id="posts-list">
-            {{#each post}}
-                <li>{{ post }}</li>
+            {{#each posts as |post|}}
+                <li>{{data}} {{workout.workout_name}} {{duration}} {{mood_before}} {{mood_after}} {{achieved}}</li>
             {{/each}}
         </ul>
     </div>
