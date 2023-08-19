@@ -144,7 +144,7 @@
   .app-title {
     font-size: 4rem;
     /* background-color: var(--primary); */
-    background: url(./../images/logo.svg) no-repeat center center fixed;
+    /*background: url(./../images/logo.svg) no-repeat center center fixed;*/
     color: var(--primary);
     padding: 0 20px;
     display: inline-block;

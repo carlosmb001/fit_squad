@@ -24,6 +24,11 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    profile_image: {
+      type: DataTypes.STRING,
+      defaultValue:'avatar.svg'
+      
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

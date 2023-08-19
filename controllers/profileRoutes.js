@@ -10,7 +10,26 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
       console.log(file)
-      cb(null, req.session.user_id + path.extname(file.originalname))
+
+      const destFilename = req.session.user_id + path.extname(file.originalname)
+      try {
+        //Update user record with profile image file name.
+        User.update({
+          profile_image: destFilename
+        }, {
+          where: {
+            id: req.session.user_id
+          },
+          individualHooks: true,
+        }).then (()=> {
+          cb(null,destFilename )
+        })
+    
+      } catch (err) {
+        console.log(err)
+        cb(null,destFilename )
+      }
+       
     }
   })
 const upload = multer({ storage : storage })
