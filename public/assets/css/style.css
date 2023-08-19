@@ -1,13 +1,12 @@
 :root {
 
-    --primary: #ccdad1;
-    --secondary: #9caea9;
-    --tertiary: #788585;
-    --light-dark: #6f6866;
-    --dark: #37382e;
-    --border-radius: .3rem;
-  }
-  
+  --primary: #ffffff;
+  --secondary: #3e83d7;
+  --tertiary: #788585;
+  --light-dark: #6f6866;
+  --dark: #37382e;
+
+}
   * {
     box-sizing: border-box;
   }
@@ -30,16 +29,16 @@
   h4,
   h5,
   h6 {
-    font-weight: 700;
+    text-align: center;
+
+    font-weight: 800;
     margin: 0;
-    color: var(--dark);
+    color: var(--primary);
     line-height: 1.25;
   }
   
-  
-  
   main {
-    margin: 20px auto;
+    margin: 0 auto;
     width: 94%;
   }
   
@@ -129,14 +128,11 @@
   }
   
   .hero a {
-    color: var(--dark);
+    color: var(--primary);
     text-decoration: none;
   }
   
-  a { 
-    color: var(--dark);
-    text-decoration: none;
-  }
+ 
   
   a:hover {
     color: rgb(236, 233, 233);
@@ -149,14 +145,16 @@
     font-size: 4rem;
     /* background-color: var(--primary); */
     background: url(./../images/logo.svg) no-repeat center center fixed;
-    color: var(--dark);
+    color: var(--primary);
     padding: 0 20px;
     display: inline-block;
     border-radius: var(--border-radius);
     /*box-shadow: 6px 5px var(--light-dark);*/
     width: fit-content;
   }
-  
+
+  /* Removed to work on dashboard, code didn't seem to be used 
+  ---------------------------------------------------------------------------------
   .list-group {
     padding: 0;
     list-style: none;
@@ -190,7 +188,7 @@
     color: rgb(29, 153, 255);
   }
   
-  /* CARDS */
+  /* CARDS 
   .card {
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
@@ -209,7 +207,7 @@
     padding: 1%;
   }
   
-  /* FORM */
+  /* FORM 
   .form-label,
   .form-input,
   .form-textarea {
@@ -230,7 +228,7 @@
     border-radius: var(--border-radius);
   }
   
-  /* HEIGHT / WIDTH UTILS */
+  /* HEIGHT / WIDTH UTILS 
   .min-100-vh {
     min-height: 100vh;
   }
@@ -239,13 +237,13 @@
     min-width: 100vw;
   }
   
-  /* FONT UTILS */
+  /* FONT UTILS 
   .text-uppercase {
     text-transform: uppercase;
   }
   
   
-  /* FLEX CONTENT */
+  /* FLEX CONTENT 
   .flex-row {
     display: flex;
     flex-wrap: wrap;
@@ -342,7 +340,7 @@
   }
 
 
-/* col-md */
+/* col-md 
 @media screen and (min-width: 768px) {
   .col-md-1 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
@@ -393,7 +391,7 @@
   }
 }
 
-/* col-lg */
+/* col-lg
 @media screen and (min-width: 992px) {
   .col-lg-1 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
@@ -444,7 +442,7 @@
   }
 }
 
-/* col-xl */
+/* col-xl 
 @media screen and (min-width: 1200px) {
   .col-xl-1 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
@@ -493,13 +491,4 @@
   .col-xl-12 {
     flex: 0 0 100%;
   }
-}
-
-@media screen and (max-width: 768px) {
-
-  .hero nav ul li {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 50px;
-  }
-}
+}*/

@@ -1,77 +1,163 @@
+<link rel="stylesheet" href="/assets/css/dashboard.css" />
 
-<div class="card">
- {{!-- card showing profile pic, mood, link to profile --}}
-    <div class="profile-preview">
-        <a href="./profile.handlebars">
-            <img src="{{profile_pic}}" alt="profile pic" class="profile-pic">
-            {{first_name}} + {{last_name}}
-        </a> 
-    </div>
- {{!-- field to create workout goal --}}
-    <form class="card" id="post-form">
-        <h3>New Workout Goal:</h3>
-        <label for="workouts">Exercise:</label>
-        <select name="workouts" id="workout-btn">
-            {{#each workouts as |workout|}}
-                 <option>{{workout_name}}</option>
-            {{/each}}
-        </select>
-        <label for="duration">Duration:</label>
-        <select name="workout-goals" id="goals-btn">
-            <option>10 min</option>
-            <option>20 min</option>
-            <option>30 min</option>
-            <option>40 min</option>
-            <option>50 min</option>
-            <option>60 min</option>
-            <option>90 min</option>
-            <option>120 min</option>
-            <option>150 min</option>
-            <option>180 min</option>
-            <option>210 min</option>
-            <option>240 min</option>
-        </select>
-        <br>
-        <button type="submit" id="newGoalBtn">New Goal</button>
-    </form>
- {{!-- field for user to make posts  --}}
-    <form class="card">
-        <h3>New Post:</h3>
-        <label for="workouts">Exercise:</label>
-        <select name="workouts" id="workout-btn">
-            {{#each workouts as |workout|}}
-                 <option>{{workout_name}}</option>
-            {{/each}}
-        </select>
-        <label for="workout-goals">Goals:</label>
-        <select name ="workout-goals" id="goals-btn">
-            {{#each goals as |goal|}}
-                <option>{{workout.workout_name}}-{{duration}} mins</option>
-            {{/each}}
-        </select>
-        <br/>
-        <input class="post" type="text" id="post-input" placeholder="How'd you get fit today?">
-        <button type="submit" id="postBtn">Post</button>
-    </form>
- {{!-- section to display workout goals --}}
-    <div class="card" id="goals-section">
-        <h3>Current Active Goals:</h3>
-        <ul id="goals-list">
-            {{#each goals as |goal|}}
-                <li>{{workout.workout_name}}  {{duration}}</li>
-            {{/each}}
-        </ul>
-    </div>
- {{!-- section to display posts  --}}
-    <div class="card" id="posts-section">
-        <h3>Recent Posts:</h3>
-        <ul id="posts-list">
-            {{#each posts as |post|}}
-                <li>{{data}} {{workout.workout_name}} {{duration}} {{mood_before}} {{mood_after}} {{achieved}}</li>
-            {{/each}}
-        </ul>
+<div class="container"> {{!--this will be to hold the entire page --}}
+    {{!-- card showing profile pic, mood, link to profile --}}
+
+    <div class="left-container">
+
+        <div class="profile-preview">
+            <a href="./profile.handlebars">
+                <figure class="">
+                    <img class="profile-pic"
+                        src="https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart"
+                        alt="profile pic" class="profile-pic">
+                    {{!-- <img src="{{profile_pic}}" alt="profile pic" class="profile-pic"> add once its able to pull
+                    the image top one is a place holder--}}
+                </figure>
+                <div class="profile-name">
+                    {{!-- <h2>{{first_name}}</br>{{last_name}}</h2> add back in once its able to pull the name and
+                    remove the bottom line--}}
+                    <h2>Carlos<br>Martinez</h2>
+                </div>
+            </a>
+        </div>
+
+        {{!-- field to create workout goal --}}
+        <form class="box">
+            <div class="field">
+                <div class="new-goal-header">
+                    <h3>New Goal</h3>
+                </div>
+                <label class="label">Exercise</label>
+                <div class="select is-normal">
+                    <select name="workouts" id="workout-btn">
+                        {{#each workouts as |workout|}}
+                        <option>{{workout_name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <label class="label" for="workout-goals">Duration</label>
+            <div class="select is-normal">
+                <select name="workout-goals" id="goals-btn">
+                    <option>10 min</option>
+                    <option>20 min</option>
+                    <option>30 min</option>
+                    <option>40 min</option>
+                    <option>50 min</option>
+                    <option>60 min</option>
+                    <option>90 min</option>
+                    <option>120 min</option>
+                    <option>150 min</option>
+                    <option>180 min</option>
+                    <option>210 min</option>
+                    <option>240 min</option>
+                </select>
+
+            </div>
+
+            <button class="button is-link is-normal" type="submit" id="postBtn">Create</button>
+        </form>
+
+
+        {{!-- field for user to make posts --}}
+        <form class="box">
+            <div class="field">
+                <div class="new-post-header">
+                    <h3>New Post</h3>
+                </div>
+                <label class="label">Exercise</label>
+                <div class="select is-normal">
+                    <select name="workouts" id="workout-btn">
+                        {{#each workouts as |workout|}}
+                        <option>{{workout_name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <label class="label" for="workout-goals">Goals</label>
+            <div class="select is-normal">
+                <select name="workout-goals" id="goals-btn">
+                    {{#each goals as |goal|}}
+                    <option>{{workout.workout_name}}: {{duration}} mins</option>
+                    {{/each}}
+                </select>
+            </div>
+            <br>
+            <input class="input is-hovered" class="post" type="text" id="post-input"
+                placeholder="How'd you get fit today?">
+            </input>
+            <button class="button is-link is-normal" type="submit" id="postBtn">Post</button>
+        </form>
     </div>
 
+
+    {{!-- section to display workout goals --}}
+    <div class="right-container">
+        <div class="message-header goals-header">
+            <h3>Current Goals</h3>
+        </div>
+        {{#each goals as |goal|}}
+        <div class="goals card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    Duration: {{duration}}
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    Workout Preformed</br>
+                    {{workout.workout_name}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+        {{!-- section to display posts --}}
+        <div class="message-header posts-header">
+            <h3>Recent Posts</h3>
+        </div>
+        {{#each posts as |post|}}
+        <article class="posts media">
+            <figure class="media-left">
+                <p class="image is-64x64">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>{{workout.workout_name}}</strong> <small>{{duration}} mins</small> <small>Goal achived
+                            {{achieved}}</small>
+                        <br>
+                        Mood before {{mood_before}}<br>
+                        Mood after{{mood_after}}<br>
+                        Data {{data}}<br>
+                    </p>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left">
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="media-right">
+                <button class="delete"></button>
+            </div>
+        </article>
+        {{/each}}
+    </div>
+
+</div>
 </div>
 
 <script src="/js/dashboard.js"></script>
