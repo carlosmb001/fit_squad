@@ -116,11 +116,13 @@
         <div class="message-header goals-header">
             <h3>Current Goals</h3>
         </div>
+
+        {{!-- 
         {{#each goals as |goal|}}
         <div class="goals card">
 
             <header class="card-header">
-                <button id="delete-post" class="delete"></button>
+                <button id="delete-goal" data-id="{{id}}" class="delete"></button>
                 <p class="card-header-title">
                     Duration: {{duration}} min
                 </p>
@@ -133,8 +135,16 @@
             </div>
 
         </div>
-        {{/each}}
+        {{/each}}--}}
 
+
+ {{#each goals as |goal|}}
+        <div class="notification">
+  <button class="delete"></button>
+  <strong>Workout:</strong> {{workout.workout_name}}<br>
+  <strong> Duration:</strong> {{duration}} mins
+</div>
+ {{/each}}
         {{!-- section to display posts --}}
         <div class="message-header posts-header">
             <h3>Recent Posts</h3>

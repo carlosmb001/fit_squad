@@ -59,25 +59,53 @@ document.getElementById("postBtn").addEventListener("click", async (e) => {
     }
 })
 
+if(document.getElementById("delete-post")) {
 
-document.getElementById("delete-post").addEventListener("click", async (e) => {
-    e.preventDefault();
+    document.getElementById("delete-post").addEventListener("click", async (e) => {
+        e.preventDefault();
 
-    try {
-        const response = await fetch('/api/posts/'+e.target.dataset.id, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+        try {
+            const response = await fetch('/api/posts/'+e.target.dataset.id, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
 
-        });
+            });
 
-        if (!response.ok) {
-            throw new Error('delete post request failed');
+            if (!response.ok) {
+                throw new Error('delete post request failed');
+            }
+
+            window.location = '/dashboard'; // Redirect to a different page after successful submission
+        } catch (error) {
+            console.error('Error creating post:', error);
         }
+    })
+}
 
-        window.location = '/dashboard'; // Redirect to a different page after successful submission
-    } catch (error) {
-        console.error('Error creating post:', error);
-    }
-})
+
+if (document.getElementById("delete-goal")) {
+
+    document.getElementById("delete-goal").addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('/api/goals/'+e.target.dataset.id, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+
+            });
+
+            if (!response.ok) {
+                throw new Error('delete goal request failed');
+            }
+
+            window.location = '/dashboard'; // Redirect to a different page after successful submission
+        } catch (error) {
+            console.error('Error creating goal:', error);
+        }
+    })
+}
