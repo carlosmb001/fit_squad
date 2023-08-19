@@ -4,12 +4,11 @@
     {{!-- card showing profile pic, mood, link to profile --}}
 
     <div class="left-container">
-
         <div class="profile-preview">
-            <a href="./profile.handlebars">
+            <a href="./profile">
                 <figure class="">
                     <img class="profile-pic"
-                        src="https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart"
+                        src="/assets/images/{{user.profile_image}}"
                         alt="profile pic" class="profile-pic">
                     {{!-- <img src="{{profile_pic}}" alt="profile pic" class="profile-pic"> add once its able to pull
                     the image top one is a place holder--}}
@@ -17,10 +16,11 @@
                 <div class="profile-name">
                     {{!-- <h2>{{first_name}}</br>{{last_name}}</h2> add back in once its able to pull the name and
                     remove the bottom line--}}
-                    <h2>Carlos<br>Martinez</h2>
+                    <h2>{{user.first_name}}<br>{{user.last_name}}</h2>
                 </div>
             </a>
         </div>
+
 
         {{!-- field to create workout goal --}}
         <form class="box">
@@ -66,7 +66,7 @@
                 <div class="new-post-header">
                     <h3>New Post</h3>
                 </div>
-                <label class="label">Exercise</label>
+                <label class="label" >Exercise</label>
                 <div class="select is-normal">
                     <select name="workouts" id="post-workout-btn">
                         {{#each workouts as |workout|}}
@@ -138,7 +138,7 @@
             <figure class="media-left">
                 <p class="image is-64x64">
                     <img
-                        src="https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart">
+                        src="/assets/images/{{../user.profile_image}}">
                 </p>
             </figure>
             <div class="media-content">
@@ -167,7 +167,7 @@
                 </nav>
             </div>
             <div class="media-right">
-                <button class="delete"></button>
+                <button id="delete-post" class="delete"></button>
             </div>
         </article>
         {{/each}}

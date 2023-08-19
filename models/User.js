@@ -24,6 +24,11 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    profile_image: {
+      type: DataTypes.STRING,
+      defaultValue:'avatar.svg'
+      
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -48,6 +53,7 @@ User.init(
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
+        console.log(updatedUserData)
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
       },
