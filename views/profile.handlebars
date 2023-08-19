@@ -2,7 +2,7 @@
     <div class="column">
   
       <figure class="image is-512x512">
-        <img class="is-rounded" src="assets/images/{{user.id}}.svg" style="max-width: 30vw;max-height: 50vh;object-fit: contain;" alt="Upload your profile image"/>
+        <img class="is-rounded" src="assets/images/{{user.profile_image}}" style="max-width: 30vw;max-height: 50vh;object-fit: contain;" alt="Upload your profile image"/>
         <figcaption>
 
         <div class="has-text-centered">
@@ -11,8 +11,8 @@
 
           <form action="/profile" enctype="multipart/form-data" method="post">
             <div class="form-group">
-              <input type="file" class="form-control-file" name="uploaded_file">
-              <input type="submit" value="Upload New Image" class="button is-link">
+              <input type="file" class="button form-control-file" name="uploaded_file">
+              <input type="submit" value="Upload" class="button is-link">
             </div>
           </form>
 
@@ -53,16 +53,6 @@
         <label class="label">Password</label>
         <p class="control has-icons-left">
           <input id="passwordInput" class="input" type="password" placeholder="Password">
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </p>
-      </div>
-
-      <div class="field">
-        <label class="label">Confirm Password</label>
-        <p class="control has-icons-left">
-          <input id="confPasswordInput" class="input" type="password" placeholder="Password">
           <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>
