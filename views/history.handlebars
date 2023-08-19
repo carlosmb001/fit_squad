@@ -1,64 +1,80 @@
-   <link rel="stylesheet" href="/assets/css/history.css" />
-   
-   <div class="message-header goals-header">
-            <h3>Current Goals</h3>
-        </div>
-        {{#each goals as |goal|}}
-        <div class="goals card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    Duration: {{duration}}
-                </p>
-            </header>
-            <div class="card-content">
-                <div class="content">
-                    Workout Preformed</br>
-                    {{workout.workout_name}}
-                </div>
-            </div>
-        </div>
-        {{/each}}
+<link rel="stylesheet" href="/assets/css/history.css" />
 
-        {{!-- section to display posts --}}
-        <div class="message-header posts-header">
-            <h3>Recent Posts</h3>
-        </div>
-        {{#each posts as |post|}}
-        <article class="posts media">
-            <figure class="media-left">
-                <p class="image is-64x64">
-                    <img
-                        src="https://images.squarespace-cdn.com/content/v1/5446f93de4b0a3452dfaf5b0/1626904421257-T6I5V5IQ4GI2SJ8EU82M/Above+Avalon+Neil+Cybart">
-                </p>
-            </figure>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>{{workout.workout_name}}</strong> <small>{{duration}} mins</small> <small>Goal achived
-                            {{achieved}}</small>
-                        <br>
-                        Mood before {{mood_before}}<br>
-                        Mood after{{mood_after}}<br>
-                        Data {{data}}<br>
-                    </p>
-                </div>
-                <nav class="level is-mobile">
-                    <div class="level-left">
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fas fa-reply"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-            <div class="media-right">
-                <button class="delete"></button>
-            </div>
-        </article>
-        {{/each}}
+
+
+
+<div class="right-container">
+    <div class="message-header goals-header">
+        <h3>Current Goals</h3>
     </div>
+
+    {{!--
+    {{#each goals as |goal|}}
+    <div class="goals card">
+
+        <header class="card-header">
+            <button id="delete-post" class="delete"></button>
+            <p class="card-header-title">
+                Duration: {{duration}}
+            </p>
+        </header>
+        <div class="card-content">
+            <div class="content">
+                Workout Preformed</br>
+                {{workout.workout_name}}
+            </div>
+        </div>
+
+    </div>
+    {{/each}}--}}
+
+
+    {{#each goals as |goal|}}
+    <div class="notification">
+        <button class="delete"></button>
+        <strong>Workout:</strong> {{workout.workout_name}}<br>
+        <strong> Duration:</strong> {{duration}} mins
+    </div>
+    {{/each}}
+    {{!-- section to display posts --}}
+    <div class="message-header posts-header">
+        <h3>Recent Posts</h3>
+    </div>
+    {{#each posts as |post|}}
+    <article class="posts media">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="/assets/images/{{../user.profile_image}}">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+                <p>
+                    <strong>Workout Completed</strong> <small></small> <small></small>
+                    <br>
+                    {{workout.workout_name}}<br>
+                    {{duration}} mins<br>
+                </p>
+            </div>
+            <nav class="level is-mobile">
+                <div class="level-left">
+                    <a class="level-item">
+                        <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="media-right">
+            <button id="delete-post" class="delete"></button>
+        </div>
+    </article>
+    {{/each}}
+</div>
+
+</div>
