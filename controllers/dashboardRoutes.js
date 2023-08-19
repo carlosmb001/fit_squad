@@ -12,9 +12,9 @@ router.get("/", logAuth, async (req, res) => {
     });
 
     const goals = await Goal.findAll({
-       /*   where: {
-            id: req.params.id,
-        },*/
+          where: {
+            user_id: req.session.user_id,
+        },
         include: [{ model: Workout}],
     });
 
@@ -23,9 +23,9 @@ router.get("/", logAuth, async (req, res) => {
     });
 
     const posts = await Post.findAll({
-      /*   where: {
-           id: req.params.id,
-       },*/
+         where: {
+           user_id: req.session.user_id,
+       },
        include: [{ model: Workout}, {model:Goal}],
    });
 
