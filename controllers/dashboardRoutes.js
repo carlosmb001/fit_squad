@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { logAuth } = require('../utils/auth')
-const { Workout,Goal, Post } = require('../models')
+const { Workout,Goal, Post, User } = require('../models')
 router.get("/", logAuth, async (req, res) => {
 
   try {
@@ -33,15 +33,20 @@ router.get("/", logAuth, async (req, res) => {
      return post.get({ plain: true });
    });
 
+   const userData = await User.findOne({ where: { id: req.session.user_id } });
+
 
     console.log( {
+      user:userData.get({ plain: true }),
       workouts:plainWorkouts,
       goals:plainGoals,
       posts:plainPosts,
+
       logged_in: req.session.logged_in,
     })
 
     res.render("dashboard", {
+      user:userData.get({ plain: true }),
       workouts:plainWorkouts,
       goals:plainGoals,
       posts:plainPosts,
