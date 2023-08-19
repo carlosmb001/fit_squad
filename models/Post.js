@@ -21,8 +21,8 @@ Post.init(
         allowNull: false,
       },
     date: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
       },
     mood_after: {
         type: DataTypes.STRING,

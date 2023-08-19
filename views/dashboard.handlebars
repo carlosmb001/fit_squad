@@ -32,7 +32,7 @@
                 <div class="select is-normal">
                     <select name="workouts" id="workout-btn">
                         {{#each workouts as |workout|}}
-                        <option>{{workout_name}}</option>
+                        <option value="{{id}}">{{workout_name}}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -40,23 +40,23 @@
             <label class="label" for="workout-goals">Duration</label>
             <div class="select is-normal">
                 <select name="workout-goals" id="goals-btn">
-                    <option>10 min</option>
-                    <option>20 min</option>
-                    <option>30 min</option>
-                    <option>40 min</option>
-                    <option>50 min</option>
-                    <option>60 min</option>
-                    <option>90 min</option>
-                    <option>120 min</option>
-                    <option>150 min</option>
-                    <option>180 min</option>
-                    <option>210 min</option>
-                    <option>240 min</option>
+            <option value="10">10 min</option>
+            <option value="20">20 min</option>
+            <option value="30">30 min</option>
+            <option value="40">40 min</option>
+            <option value="50">50 min</option>
+            <option value="60">60 min</option>
+            <option value="90">90 min</option>
+            <option value="120">120 min</option>
+            <option value="150">150 min</option>
+            <option value="180">180 min</option>
+            <option value="210">210 min</option>
+            <option value="240">240 min</option>
                 </select>
 
             </div>
 
-            <button class="button is-link is-normal" type="submit" id="postBtn">Create</button>
+            <button class="button is-link is-normal" type="button" id="newGoalBtn">Create</button>
         </form>
 
 
@@ -68,22 +68,38 @@
                 </div>
                 <label class="label">Exercise</label>
                 <div class="select is-normal">
-                    <select name="workouts" id="workout-btn">
+                    <select name="workouts" id="post-workout-btn">
                         {{#each workouts as |workout|}}
-                        <option>{{workout_name}}</option>
+                        <option value="{{id}}">{{workout_name}}</option>
                         {{/each}}
                     </select>
                 </div>
             </div>
             <label class="label" for="workout-goals">Goals</label>
             <div class="select is-normal">
-                <select name="workout-goals" id="goals-btn">
+                <select name="workout-goals" id="post-goals-btn">
+			<option value=""></option>
                     {{#each goals as |goal|}}
-                    <option>{{workout.workout_name}}: {{duration}} mins</option>
+                    <option value="{{id}}">{{workout.workout_name}}: {{duration}} mins</option>
                     {{/each}}
                 </select>
             </div>
             <br>
+         <label for="workout-posts">Duration:</label>
+        <select name="workout-posts" id="posts-duration-btn">
+            <option value="10">10 min</option>
+            <option value="20">20 min</option>
+            <option value="30">30 min</option>
+            <option value="40">40 min</option>
+            <option value="50">50 min</option>
+            <option value="60">60 min</option>
+            <option value="90">90 min</option>
+            <option value="120">120 min</option>
+            <option value="150">150 min</option>
+            <option value="180">180 min</option>
+            <option value="210">210 min</option>
+            <option value="240">240 min</option>
+        </select>
             <input class="input is-hovered" class="post" type="text" id="post-input"
                 placeholder="How'd you get fit today?">
             </input>
