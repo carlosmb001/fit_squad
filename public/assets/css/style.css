@@ -153,6 +153,14 @@
     width: fit-content;
   }
 
+  @media screen and (max-width: 870px) {
+    .hero {
+      display: block;
+    }
+    .hero nav {
+        float:none;
+    }
+  }
   /* Removed to work on dashboard, code didn't seem to be used 
   ---------------------------------------------------------------------------------
   .list-group {

@@ -41,7 +41,7 @@ document.getElementById("postBtn").addEventListener("click", async (e) => {
             body: JSON.stringify({
                 "duration": duration,
                 "workout_id": workout_id,
-                "goal_id":goal_id,
+                "goal_id":goal_id?goal_id:null,
                 "mood_after": "Stronger",
                 "mood_before": "Tired",
                 "achieved": true,

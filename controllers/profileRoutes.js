@@ -20,7 +20,6 @@ const storage = multer.diskStorage({
           where: {
             id: req.session.user_id
           },
-          individualHooks: true,
         }).then (()=> {
           cb(null,destFilename )
         })
