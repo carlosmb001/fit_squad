@@ -1,0 +1,41 @@
+:root {
+
+    --primary: #ffffff;
+    --secondary: #3e83d7;
+    --tertiary: #788585;
+    --light-dark: #6f6866;
+    --dark: #37382e;
+    --border-radius: .5rem;
+  }
+
+.profile-image {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    /* background-color: var(--secondary); */
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .image{
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+  }
+
+ 
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .button-upload{
+    padding: 15px;
+  }
+
+  .button-submit{
+
+  }
