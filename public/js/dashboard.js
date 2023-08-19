@@ -81,3 +81,26 @@ document.getElementById("delete-post").addEventListener("click", async (e) => {
         console.error('Error creating post:', error);
     }
 })
+
+
+document.getElementById("delete-goal").addEventListener("click", async (e) => {
+    e.preventDefault();
+
+    try {
+        const response = await fetch('/api/goals/'+e.target.dataset.id, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+        });
+
+        if (!response.ok) {
+            throw new Error('delete goal request failed');
+        }
+
+        window.location = '/dashboard'; // Redirect to a different page after successful submission
+    } catch (error) {
+        console.error('Error creating goal:', error);
+    }
+})
