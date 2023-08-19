@@ -122,7 +122,7 @@
         <div class="goals card">
 
             <header class="card-header">
-                <button id="delete-post" class="delete"></button>
+                <button id="delete-goal" data-id="{{id}}" class="delete"></button>
                 <p class="card-header-title">
                     Duration: {{duration}}
                 </p>
@@ -140,7 +140,7 @@
 
  {{#each goals as |goal|}}
         <div class="notification">
-  <button class="delete"></button>
+  <button id="delete-goal" data-id="{{id}}" class="delete delete-goal"></button>
   <strong>Workout:</strong> {{workout.workout_name}}<br>
   <strong> Duration:</strong> {{duration}} mins
 </div>
@@ -180,7 +180,7 @@
                 </nav>
             </div>
             <div class="media-right">
-                <button id="delete-post" class="delete"></button>
+                <button id="delete-post" data-id="{{id}}" class="delete delete-post"></button>
             </div>
         </article>
         {{/each}}
