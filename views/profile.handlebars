@@ -1,79 +1,82 @@
-<div class="columns is-vcentered" style="height: 60vh;">
-    <div class="column">
-      <figure class="has-text-centered">
-        <img src="assets/images/{{user.id}}.svg" style="max-width: 30vw;max-height: 50vh;object-fit: contain;" alt="Upload your profile image"/>
-        <figcaption>
+<link rel="stylesheet" href="/assets/css/profile.css" />
 
+
+<div class="columns" style="height: 100vh;">
+
+
+  <div class="column">
+    <figure class="profile-image is-512x512">
+      <img class="image" src="assets/images/{{user.profile_image}}" alt="Upload your profile image" />
+      <figcaption class="buttons">
         <div class="has-text-centered">
-         
         </div>
+        <form action="/profile" enctype="multipart/form-data" method="post">
+          <div class="buttons form-group">
+            <label class="button-upload file-label">
+              <input class="button-upload file-input" type="file" name="uploaded_file">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Upload Image
+                </span>
+              </span>
+            </label>
+            <input type="submit" value="Submit" class="button is-link">
+          </div>
+        </form>
 
-          <form action="/profile" enctype="multipart/form-data" method="post">
-            <div class="form-group">
-              <input type="file" class="form-control-file" name="uploaded_file">
-              <input type="submit" value="Upload New Image" class="button is-link">
-            </div>
-          </form>
 
 
-        </figcaption>
-      </figure>
-    </div> <!-- Empty column to push the form to the right -->
+      </figcaption>
+    </figure>
+  </div> <!-- Empty column to push the form to the right -->
 
-    <div class="column is-5"> <!-- Form column -->
-      <div class="field">
-        <label class="label">First Name</label>
-        <div class="control">
-          <input id="firstNameInput" class="input" type="text" placeholder="First Name" value="{{user.first_name}}">
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label">Last Name</label>
-        <div class="control">
-          <input id="lastNameInput" class="input" type="text" value="{{user.last_name}}">
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label">Email</label>
-        <div class="control has-icons-left has-icons-right">
-          <input id="emailInput" class="input is-right" type="email" placeholder="Email input" value="{{user.email}}">
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-          </span>
-        </div>
-
-      </div>
-
-      <div class="field">
-        <label class="label">Password</label>
-        <p class="control has-icons-left">
-          <input id="passwordInput" class="input" type="password" placeholder="Password">
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </p>
-      </div>
-
-      <div class="field">
-        <label class="label">Confirm Password</label>
-        <p class="control has-icons-left">
-          <input id="confPasswordInput" class="input" type="password" placeholder="Password">
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </p>
-      </div>
-
-      <div class="field is-grouped">
-        <div class="control">
-          <button id="submitButton" class="button is-link">Update</button>
-        </div>
+  <div class="column is-5"> <!-- Form column -->
+    <div class="field">
+      <label class="label">First Name</label>
+      <div class="control">
+        <input id="firstNameInput" class="input" type="text" placeholder="First Name" value="{{user.first_name}}">
       </div>
     </div>
+
+    <div class="field">
+      <label class="label">Last Name</label>
+      <div class="control">
+        <input id="lastNameInput" class="input" type="text" value="{{user.last_name}}">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input id="emailInput" class="input is-right" type="email" placeholder="Email input" value="{{user.email}}">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+        </span>
+      </div>
+
+    </div>
+
+    <div class="field">
+      <label class="label">Password</label>
+      <p class="control has-icons-left">
+        <input id="passwordInput" class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button id="submitButton" class="button is-link">Update</button>
+      </div>
+    </div>
+  </div>
 
 </div>
 
