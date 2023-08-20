@@ -9,7 +9,7 @@ module.exports = {
         emoji = "😀";
         break;
       case "Happy":
-        emoji = "😀";
+        emoji = "🙂";
         break;
       case "Neutral":
         emoji = "😐";
@@ -18,7 +18,7 @@ module.exports = {
         emoji = "🙁";
         break;
       case "Exhausted":
-        emoji = "😀";
+        emoji = "😤";
         break;
       default:
         emoji = "";
