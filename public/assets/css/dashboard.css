@@ -12,6 +12,16 @@
     color:var(--dark);
   }
 
+  .emoji {
+    border:none;
+    font-size:x-large;
+    background:none;
+  }
+  .clicked {
+    border-radius: 0.25em;
+    font-size:x-large;
+    background:#3e83d7;
+  }
 
 .profile-preview{
     width:60%;

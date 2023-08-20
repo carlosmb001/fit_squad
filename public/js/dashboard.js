@@ -31,6 +31,13 @@ document.getElementById("postBtn").addEventListener("click", async (e) => {
     const workout_id = document.getElementById('post-workout-btn').value;
     const duration = document.getElementById('posts-duration-btn').value;
     const goal_id = document.getElementById('post-goals-btn').value;
+    const achieved = document.getElementById('achieved').checked;
+    let mood_after = ""
+
+    Array.from(document.querySelectorAll('.clicked')).forEach((button) => {
+        mood_after = button.dataset.mood;
+        button.classList.remove("clicked");
+    })
 
     try {
         const response = await fetch('/api/posts', {
@@ -42,9 +49,9 @@ document.getElementById("postBtn").addEventListener("click", async (e) => {
                 "duration": duration,
                 "workout_id": workout_id,
                 "goal_id":goal_id?goal_id:null,
-                "mood_after": "Stronger",
-                "mood_before": "Tired",
-                "achieved": true,
+                "mood_after": mood_after,
+                "mood_before": "Neutral",
+                "achieved": achieved,
                 "caption" : 50
             }),
         });
@@ -110,3 +117,24 @@ Array.from(document.querySelectorAll('.delete-goal')).forEach(function(button) {
         }
     })
 });
+
+const newPostEmoji = Array.from(document.querySelectorAll('.newpost-emoji'))
+newPostEmoji.forEach(function(button) {
+
+    button.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        if (e.target.classList.contains("clicked")) {
+            e.target.classList.remove("clicked")
+            return
+        }
+            // First remove 'clicked' class from all buttons
+        newPostEmoji.forEach(function(item){
+            item.classList.remove("clicked");
+        })
+        
+        // Next add 'clicked' class to clicked button
+        e.target.classList.add("clicked");
+
+    })
+})
