@@ -74,6 +74,15 @@
                     </select>
                 </div>
             </div>
+
+            <div id="drawer" class="column"> 
+                <button class="emoji newpost-emoji" data-mood="Very Happy">😀</button>
+                <button class="emoji newpost-emoji" data-mood="Happy">🙂</button>
+                <button class="emoji newpost-emoji" data-mood="Neutral">😐</button>
+                <button class="emoji newpost-emoji" data-mood="Not Happy">🙁</button>
+                <button class="emoji newpost-emoji" data-mood="Exhausted">😤</button>
+            </div>
+
             <label class="label" for="workout-goals">Goals</label>
             <div class="select is-normal">
                 <select name="workout-goals" id="post-goals-btn">
@@ -84,8 +93,8 @@
                 </select>
             </div>
             <br>
-            <label class="label" for="workout-posts">Duration:</label>
 
+            <label class="label" for="workout-posts">Duration:</label>
             <div class="select is-normal">
                 <select name="workout-posts" id="posts-duration-btn">
                     <option value="10">10 min</option>
@@ -102,7 +111,12 @@
                     <option value="240">240 min</option>
                 </select>
             </div>
-
+            <label class="checkbox" style="padding-left:0.75em">
+                Achieved?
+                <input id="achieved" type="checkbox">
+            </label>
+            <br/>
+            <br/>
             {{!-- <input class="input is-hovered" class="post" type="text" id="post-input" 
                 placeholder="How'd you get fit today?">
             </input>--}}
@@ -162,7 +176,8 @@
                         <strong>Workout Completed</strong> <small></small> <small></small>
                         <br>
                         {{workout.workout_name}}<br>
-                        {{duration}} mins<br>
+                        {{duration}} mins {{getMoodEmoji mood_after}} 
+                        <br> Goal Achieved? <input onclick="return false;" type="checkbox" {{#if achieved }} checked {{/if}}/>
                     </p>
                 </div>
                 <nav class="level is-mobile">
