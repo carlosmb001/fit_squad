@@ -1,0 +1,78 @@
+:root {
+    --border: black solid 2px;
+    --border_radius: 10px;
+}
+
+body {
+    display: flex;
+}
+
+#all-container {
+    border: var(--border);
+    border-radius: var(--border_radius);
+
+    padding: 0 10px 0 10px;
+    height: 300px;
+    width: 700px;
+
+    background-color: snow;
+}
+
+@media only screen and (max-width: 660px) and (min-width: 410px) {
+    #all-container {
+        height: 370px;
+    }
+}
+
+@media only screen and (max-width: 410px) and (min-width: 290px) {
+    #all-container {
+        height: 540px;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    #all-container {
+        height: 840px;
+    }
+}
+
+#message {
+    font-family: 'Arial', 'monospace', 'serif', 'sans-serif';
+    font-weight: 600;
+    font-size: 1.5rem;
+    
+    margin: 10px 10px 10px 15px;
+}
+
+button {
+    border: var(--border);
+    border-radius: var(--border_radius);
+
+    width: 120px;
+    height: 150px;
+}
+
+button:hover {
+    border-color: dodgerblue;
+    box-shadow: 1px 1px 1px 1px grey;
+}
+
+#perfect {
+    background-image: url("./images/mood_images_perfect.jpg");
+}
+
+#good {
+    background-image: url("./images/mood_images_good.jpg");
+}
+
+#neutral {
+    background-image: url("./images/mood_images_perfect.jpg");
+}
+
+#poor {
+    background-image: url("./images/mood_images_poor.jpg");
+}
+
+#bad {
+    background-image: url("./images/mood_images_bad.jpg");
+}
