@@ -21,7 +21,7 @@ module.exports = {
         emoji = "😀";
         break;
       default:
-        emoji = "😤";
+        emoji = "";
         break;
     }
     return emoji
