@@ -8,20 +8,9 @@
     --border-radius: .5rem;
   }
 
-  .label {
-    color:var(--dark);
-  }
-
-  .emoji {
-    border:none;
-    font-size:x-large;
-    background:none;
-  }
-  .clicked {
-    border-radius: 0.25em;
-    font-size:x-large;
-    background:#3e83d7;
-  }
+.label {
+color:var(--dark);
+}
 
 .profile-preview{
     width:60%;
@@ -105,11 +94,17 @@
 .emoji{
     width: 15%;
     height: 2rem;
-    background-color: var(--primary);
+    /*background-color: var(--primary);*/
     border-radius: var(--border-radius);
     padding: 10px 10px;
-    margin: 0px auto 5px auto;
+    margin: 0px auto 5px auto;*/
 }
+  
+.clicked {
+    border-radius:  var(--border-radius);
+    font-size:x-large;
+    background:var(--light-dark);
+  }
 .container {
     display: flex;
     width: 100%;
