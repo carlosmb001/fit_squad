@@ -153,3 +153,16 @@
     border-radius: var(--border-radius);
 }
 
+@media screen and (max-width: 450px) {
+    /* when the screen size is 450px or less */
+    .posts {
+        flex-wrap: wrap;
+        position: relative;
+        /* the contents of each entry under Recent Posts are wrapped... */
+    }
+    .x-button {
+        position: absolute;
+        right: 10px;
+        /* ...but the delete button is kept on the right side of the box */
+    }
+}
