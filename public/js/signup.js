@@ -8,7 +8,7 @@ document.getElementById("submitButton").addEventListener("click", async (e) => {
 
     // Check if email is valid before proceeding
     if (!isValidEmail(email)) {
-        console.error('Invalid email address');
+        console.error('Invalid email address'); //Alerts user of invalid input
         return;
     }
 
