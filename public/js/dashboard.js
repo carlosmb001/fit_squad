@@ -16,6 +16,7 @@ document.getElementById("newGoalBtn").addEventListener("click", async (e) => {
         });
 
         if (!response.ok) {
+            alert ('create goal request failed');
             throw new Error('create goal request failed');
         }
         //Alerts User of request error
