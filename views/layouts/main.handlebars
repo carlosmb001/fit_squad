@@ -12,34 +12,33 @@
 </head>
 
 <body class="min-100-vh">
-  <header class="hero">
-      <a href="/dashboard">
-      <img class="app-title" src="/assets/images/logo.svg" style="max-width:500px;max-height:100px"/>
-      </a>
-    <nav>
-        <ul>
-            {{#if logged_in}}
-            <li>
-                <a href="/dashboard">Dashboard</a>
-            </li>
-            <li>
-                <a href="/profile">Profile</a>
-            </li>
-            <li>
-                <a href="/history">History</a>
-            </li>
-            <li>
-                <a href="/user/logout">Logout</a>
-            </li>
-            {{/if}}
-        </ul>
-    </nav>
-   
-  </header>
-  <main>
+    <header class="hero">
+        <a href="/dashboard">
+            <img class="app-title" src="/assets/images/logo.svg" style="max-width:500px;max-height:100px"/>
+        </a>
+        <nav>
+            <ul>
+                {{#if logged_in}}
+                <li>
+                    <a href="/dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/profile">Profile</a>
+                </li>
+                <li>
+                    <a href="/history">History</a>
+                </li>
+                <li>
+                    <a href="/user/logout">Logout</a>
+                </li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+    <main>
 
         {{{body}}}
 
-  </main>
+    </main>
 </body>
 </html>
