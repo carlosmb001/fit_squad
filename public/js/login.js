@@ -15,7 +15,7 @@ document.getElementById("loginForm").addEventListener("submit", (e) => {
         }),
     }).then((result) => {
         if (!result.ok) {
-            alert("Bad create thing");
+            alert("Invalid username or password");
             return;
         }
 
