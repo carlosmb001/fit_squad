@@ -84,16 +84,16 @@
                     {{/each}}
                 </select>
             </div>
-
-            <div id="drawer" class="column"> 
-                <button class="emoji newpost-emoji" data-mood="Very Happy">😀</button>
-                <button class="emoji newpost-emoji" data-mood="Happy">🙂</button>
-                <button class="emoji newpost-emoji" data-mood="Neutral">😐</button>
-                <button class="emoji newpost-emoji" data-mood="Not Happy">🙁</button>
-                <button class="emoji newpost-emoji" data-mood="Exhausted">😤</button>
+            <label class="label feeling">How do you feel?</label>
+            <div id="emoji-container drawer">
+                <button class="emoji newpost-emoji button is-normal " data-mood="Very Happy">😀</button>
+                <button class="emoji newpost-emoji button is-normal" data-mood="Happy">🙂</button>
+                <button class="emoji newpost-emoji button is-normal" data-mood="Neutral">😐</button>
+                <button class="emoji newpost-emoji button is-normal" data-mood="Not Happy">🙁</button>
+                <button class="emoji newpost-emoji button is-normal" data-mood="Exhausted">😤</button>
             </div>
 
-            <label class="label" for="workout-posts">Duration:</label>
+            <label class="label" for="workout-posts">Duration</label>
             <div class="select is-normal">
                 <select name="workout-posts" id="posts-duration-btn">
                     <option value="10">10 min</option>
@@ -110,13 +110,11 @@
                     <option value="240">240 min</option>
                 </select>
             </div>
-     
-            <label class="checkbox" style="padding:0.75em;">
-                Achieved?
-                <input id="achieved" type="checkbox">
+
+            <label class="checkbox " style="padding:0.75em;"><Strong>Achieved</Strong> <input id="achieved" type="checkbox">
             </label>
 
-            {{!-- <input class="input is-hovered" class="post" type="text" id="post-input" 
+            {{!-- <input class="input is-hovered" class="post" type="text" id="post-input"
                 placeholder="How'd you get fit today?">
             </input>--}}
             <button class="button is-link is-normal" type="submit" id="postBtn">Post</button>
@@ -130,19 +128,19 @@
             <h3>Current Goals</h3>
         </div>
 
-        {{!-- 
+        {{!--
         {{#each goals as |goal|}}
         <div class="goals card">
 
             <header class="card-header">
                 <button id="delete-goal" data-id="{{id}}" class="delete"></button>
                 <p class="card-header-title">
-                    Duration: {{duration}}
+                    Duration: {{duration}} min
                 </p>
             </header>
             <div class="card-content">
                 <div class="content">
-                    Workout Preformed</br>
+                    Workout Preformed:</br>
                     {{workout.workout_name}}
                 </div>
             </div>
@@ -151,13 +149,13 @@
         {{/each}}--}}
 
 
- {{#each goals as |goal|}}
+        {{#each goals as |goal|}}
         <div class="notification">
-  <button id="delete-goal" data-id="{{id}}" class="delete delete-goal"></button>
-  <strong>Workout:</strong> {{workout.workout_name}}<br>
-  <strong> Duration:</strong> {{duration}} mins
-</div>
- {{/each}}
+            <button id="delete-goal" data-id="{{id}}" class="delete delete-goal"></button>
+            <strong>Workout:</strong> {{workout.workout_name}}<br>
+            <strong> Duration:</strong> {{duration}} mins
+        </div>
+        {{/each}}
         {{!-- section to display posts --}}
         <div class="message-header posts-header">
             <h3>Recent Posts</h3>
@@ -175,8 +173,9 @@
                         <strong>Workout Completed</strong> <small></small> <small></small>
                         <br>
                         {{workout.workout_name}}<br>
-                        {{duration}} mins {{getMoodEmoji mood_after}} 
-                        <br> Goal Achieved? <input onclick="return false;" type="checkbox" {{#if achieved }} checked {{/if}}/>
+                        {{duration}} mins {{getMoodEmoji mood_after}}
+                        <br>Goal Achieved <input onclick="return false;" type="checkbox" {{#if achieved }} checked
+                            {{/if}} />
                     </p>
                 </div>
                 <nav class="level is-mobile">
@@ -200,7 +199,6 @@
         {{/each}}
     </div>
 
-</div>
 </div>
 
 <script src="/js/dashboard.js"></script>

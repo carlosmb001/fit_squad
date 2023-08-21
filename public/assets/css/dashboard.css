@@ -86,8 +86,29 @@
     align-items: center;
     background-color: var(--secondary);
     border-radius: var(--border-radius);
-    padding: 10px 10px;
+    padding: 0px 10px;
     margin: 15px auto;
+}
+.emoji-container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary);
+    border-radius: var(--border-radius);
+    padding: 0px 10px;
+    margin: 15px auto;
+}
+.feeling{
+    padding: 0x;
+    margin: 5px auto 0px auto;
+}
+.emoji{
+    width: 15%;
+    height: 2rem;
+    background-color: var(--primary);
+    border-radius: var(--border-radius);
+    padding: 10px 10px;
+    margin: 0px auto 5px auto;
 }
 .container {
     display: flex;
@@ -108,6 +129,31 @@
     padding: 20px 0px;
     margin: 15px auto;
 }
+
+@media screen and (max-width: 500px) {
+    /* when the screen width is 500 px or less */
+    .container {
+        flex-wrap: wrap; /* the left container and right container are wrapped, pushing the right container below the left container. source for using flex-wrap: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap */
+    }
+    .left-container {
+        margin-left: 0; /* the left container loses its left margin, which brings the content closer to the left of the screen to improve visibility */
+    }
+    .profile-preview {
+        width: 100%;
+        margin-left: 70px;
+        /* the profile picture widens and is pushed away from the left of the screen */
+    }
+    .box {
+        width: 200%; /* the New Goal and New Post boxes double in width */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .right-container {
+        padding-right: 20px; /* when the screen width is 320px or less, the right container gains 20px of padding on its right side, which pushes the content to the left to improve visibility */
+    }
+}
+
 .c-goal-container{
     width: 100%;
     flex-direction: column;

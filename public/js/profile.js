@@ -29,6 +29,7 @@ document.getElementById("submitButton").addEventListener("click", async (e) => {
       });
 
       if (!response.ok) {
+        alert ('Update user request failed');
           throw new Error('create user request failed');
       }
 
