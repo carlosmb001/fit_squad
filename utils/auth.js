@@ -1,4 +1,4 @@
-const logAuth = (req, res, next) => {
+const logAuth = (req, res, next) => { //User Login
   if (!req.session.logged_in) {
     res.redirect("/user/login");
   } else {
@@ -8,7 +8,7 @@ const logAuth = (req, res, next) => {
 
 const apiAuth = (req, res, next) => {
   if (!req.session.logged_in) {
-    res.status(401).json({ message: 'Unauthorized request!' });
+    res.status(401).json({ message: 'Unauthorized request!' }); //Alerts User of unathorized request
     return
   } else {
     next();

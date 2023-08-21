@@ -16,9 +16,10 @@ document.getElementById("newGoalBtn").addEventListener("click", async (e) => {
         });
 
         if (!response.ok) {
+            alert ('create goal request failed');
             throw new Error('create goal request failed');
         }
-
+        //Alerts User of request error
         window.location = '/dashboard'; // Redirect to a different page after successful submission
     } catch (error) {
         console.error('Error creating goal:', error);
@@ -59,7 +60,7 @@ document.getElementById("postBtn").addEventListener("click", async (e) => {
         if (!response.ok) {
             throw new Error('create post request failed');
         }
-
+        //Alerts user of request error
         window.location = '/dashboard'; // Redirect to a different page after successful submission
     } catch (error) {
         console.error('Error creating post:', error);

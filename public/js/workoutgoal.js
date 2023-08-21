@@ -8,7 +8,7 @@ function fill_template() {
             {name: "haha templates go brrrrrrrr"}
         ],
         footer: "this is a footer"
-    };
+    }; 
     var template = Handlebars.compile(document.querySelector("#template").innerHTML);
     var filled = template(data);
     document.querySelector("#output").innerHTML = filled;
