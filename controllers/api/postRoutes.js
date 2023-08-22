@@ -53,6 +53,7 @@ router.post("/", apiAuth , async (req, res) => {
 });
 
 // update a post
+//http;//localhost:3001/api/posts/1
 router.put("/:id", apiAuth, async (req, res) => {
   try {
 
