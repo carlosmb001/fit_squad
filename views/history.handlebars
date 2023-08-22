@@ -5,7 +5,7 @@
 
 <div class="right-container">
     <div class="message-header goals-header">
-        <h3>Current Goals</h3>
+        <h3>Past Goals</h3>
     </div>
 
     {{!--
@@ -31,7 +31,7 @@
 
     {{#each goals as |goal|}}
     <div class="notification">
-        <button class="delete"></button>
+        {{!-- <button class="delete"></button> --}}
         <strong>Workout:</strong> {{workout.workout_name}}<br>
         <strong> Duration:</strong> {{duration}} mins<br>
         Created on {{formatDate date 'MM/DD/yyyy'}} 
@@ -39,7 +39,7 @@
     {{/each}}
     {{!-- section to display posts --}}
     <div class="message-header posts-header">
-        <h3>Recent Posts</h3>
+        <h3>Past Posts</h3>
     </div>
     {{#each posts as |post|}}
     <article class="posts media">
@@ -74,7 +74,7 @@
             </nav>
         </div>
         <div class="x-button media-right">
-            <button id="delete-post" class="delete"></button>
+            {{!-- <button id="delete-post" class="delete"></button> --}}
         </div>
     </article>
     {{/each}}
