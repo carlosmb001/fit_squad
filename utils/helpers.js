@@ -28,7 +28,7 @@ module.exports = {
     return emoji
   },
   formatDate: (date, format) => {
-    let momentDate = moment(date);
+    let momentDate = moment(date).local();
     return momentDate.format(format);
   },
 };
