@@ -1,3 +1,4 @@
+const moment = require('moment')
 module.exports = {
   format_date: (date) => {
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
@@ -25,6 +26,10 @@ module.exports = {
         break;
     }
     return emoji
+  },
+  formatDate: (date, format) => {
+    let momentDate = moment(date).local();
+    return momentDate.format(format);
   },
 };
 

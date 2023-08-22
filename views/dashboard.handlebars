@@ -153,7 +153,8 @@
         <div class="notification">
             <button id="delete-goal" data-id="{{id}}" class="delete delete-goal"></button>
             <strong>Workout:</strong> {{workout.workout_name}}<br>
-            <strong> Duration:</strong> {{duration}} mins
+            <strong> Duration:</strong> {{duration}} mins <br>
+            Created on {{formatDate date 'MM/DD/yyyy'}} 
         </div>
         {{/each}}
         {{!-- section to display posts --}}
@@ -170,7 +171,7 @@
             <div class="media-content">
                 <div class="content">
                     <p>
-                        <strong>Workout Completed</strong> <small></small> <small></small>
+                        <strong>Workout Completed on {{formatDate date 'MM/DD/yyyy hh:mm A'}}</strong> <small></small> <small></small>
                         <br>
                         {{workout.workout_name}}<br>
                         {{duration}} mins {{getMoodEmoji mood_after}}
